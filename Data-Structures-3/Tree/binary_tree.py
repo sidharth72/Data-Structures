@@ -84,8 +84,8 @@ class BinaryTree:
 
     def _postorder(self, root, result):
         if root:
-            self._inorder(root.left, result)
-            self._inorder(root.right, result)
+            self._postorder(root.left, result)
+            self._postorder(root.right, result)
             result.append(root.key)
 
     def height(self):
