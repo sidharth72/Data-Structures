@@ -13,7 +13,7 @@ class Stack:
             raise IndexError("Stack Overflow")
         
     def pop(self):
-        if self.top < self.capacity - 1:
+        if self.top >= 0:
             popped = self.array[-1]
             self.top -= 1
             return popped
